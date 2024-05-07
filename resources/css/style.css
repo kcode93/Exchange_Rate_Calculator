@@ -1,6 +1,11 @@
 :root {
 	--form-border-color: hsl(0, 0%, 93%);
-	--form-border-hover: hsl(180, 76%, 50%);
+	--form-border-hover: hsl(167, 40%, 55%);
+	--title-color: var(--form-border-hover);
+}
+
+.title {
+	color: var(--title-color);
 }
 
 .form-control,
