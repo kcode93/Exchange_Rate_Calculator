@@ -5,13 +5,19 @@ const currencyElementTwo = document.querySelector('#currency-two');
 const currencyElementTwoAmnt = document.querySelector('#amount-two');
 const rate = document.querySelector('#rate');
 const swap_btn = document.querySelector('#swap');
-let counter = 0;
+
 
 
 //Exchange Rates & Update DOM
 function calculate (){
-   console.log(`Hello MTF ${counter}`);
-   counter++;
+   const currOne_val = currencyElementOne.value;
+   const currTwo_val = currencyElementTwo.value;
+
+   fetch(`https://open.er-api.com/v6/latest/${currOne_val}`)
+   .then(res => res.json())
+   .then(data => {
+        console.log(data);
+   });
 }
 
 //Event Listeners
