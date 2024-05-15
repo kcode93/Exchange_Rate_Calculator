@@ -3,7 +3,7 @@ const currencyElementOne = document.querySelector('#currency-one');
 const currencyElementOneAmnt = document.querySelector('#amount-one');
 const currencyElementTwo = document.querySelector('#currency-two');
 const currencyElementTwoAmnt = document.querySelector('#amount-two');
-const rate = document.querySelector('#rate');
+const ratebox = document.querySelector('#rateTarget');
 const swap_btn = document.querySelector('#swap');
 
 
@@ -16,8 +16,11 @@ function calculate (){
    fetch(`https://open.er-api.com/v6/latest/${currOne_val}`)
    .then(res => res.json())
    .then(data => {
-        console.log(data);
+        let localRate = data.rates[currTwo_val];
+        ratebox.innerText = `1 ${currOne_val} = ${localRate} ${currTwo_val}`;
    });
+
+   
 }
 
 //Event Listeners

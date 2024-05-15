@@ -1,6 +1,8 @@
 :root {
+	--main-color: hsl(167, 40%, 55%);
+	--main-color-hover: hsl(167, 40%, 45%);
 	--form-border-color: hsl(0, 0%, 93%);
-	--form-border-hover: hsl(167, 40%, 55%);
+	--form-border-hover: var(--main-color);
 	--title-color: var(--form-border-hover);
 }
 
@@ -26,3 +28,22 @@
 #logo:hover {
 	transform: scale(1.2);
 }
+
+.rate {
+	color: var(--main-color);
+}
+
+.btn.btn-main {
+	background-color: var(--main-color) !important;
+	color: #fff !important;
+	transition: all 0.5s ease-in-out;
+}
+
+.btn.btn-main:hover {
+	background-color: var(--main-color-hover) !important;
+	color: #fff !important;
+}
+
+/* div {
+	border: 1.5px solid red;
+} */
