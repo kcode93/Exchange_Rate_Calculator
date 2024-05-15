@@ -18,6 +18,8 @@ function calculate (){
    .then(data => {
         let localRate = data.rates[currTwo_val];
         ratebox.innerText = `1 ${currOne_val} = ${localRate} ${currTwo_val}`;
+
+        currencyElementTwoAmnt.value = (currencyElementOneAmnt.value * localRate).toFixed(2);
    });
 
    
